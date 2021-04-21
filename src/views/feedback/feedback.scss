@@ -1,0 +1,7 @@
+@import '../../styles/mixin.scss';
+.detailHead {
+  @include fj();
+  margin: 0 auto 20px auto;
+  width: 90%;
+  @include sc(18px,#157eff);
+}

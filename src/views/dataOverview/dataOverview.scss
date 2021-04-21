@@ -1,0 +1,102 @@
+@import '../../styles/mixin.scss';
+.topArea {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.realDataWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  @include sc(20px,#313131);
+  background: rgba(37,98,220,0.1) url('../../assets/customImages/hz8.png') no-repeat center;
+  background-size: 274px 199px;
+  span {
+    &.count {
+      display: block;
+      margin-top: 10px;
+      @include sc(44px,#2562dc);
+      color: #2562dc;
+    }
+  }
+}
+.moduleTab {
+  @include fj(flex-start);
+  flex-wrap: wrap;
+  align-items: center;
+  width: calc(100% - 320px);
+  height: 300px;
+  box-sizing: border-box;
+  background-color: #fff;
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    width: 320px;
+    height: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    &.active {
+      background-color: #f0f0f0;
+    }
+    img {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    p {
+      @include sc(20px,#313131);
+      &.count {
+        @include sc(32px,#d70029);
+      }
+    }
+  }
+}
+#indicatorChart {
+  height: 525px;
+}
+.indicatorList {
+  padding: 0 35px;
+  margin: 15px auto;
+  height: 80px;
+  background-color: #fff;
+}
+.indicatorList .swiper-slide {
+  width: auto;
+  padding: 0 15px;
+  line-height: 80px;
+  border-radius: 5px;
+  // background: #919191;
+  cursor: pointer;
+}
+.indicatorList .slideActive {
+  color: #2562dc;
+  // background: #00f8fc;
+}
+.switchWrap {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  width: 220px;
+  span {
+    display: inline-block;
+    width: 50%;
+    line-height: 40px;
+    @include sc(16px,#ccc);
+    background: #ececec;
+    color: #a6a6a6;
+    text-align: center;
+    cursor: pointer;
+    &.active {
+      background: #2562dc;
+      color: #fff;
+    }
+  }
+}

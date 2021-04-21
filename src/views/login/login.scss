@@ -1,0 +1,54 @@
+@import '../../styles//mixin.scss';
+$dark_gray:#889aa4;
+$light_gray:#eee;
+
+.loginContainer {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  @include bis('../../assets/customImages/hz1.png');
+  overflow: hidden;
+  .logoWrap {
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    @include sc(42px,#fff);
+    img {
+      margin-right: 5px;
+      @include wh(72px,86px);
+      vertical-align: middle;
+    }
+  }
+  .loginFormWrap {
+    @include center();
+    @include wh(600px,500px);
+    @include borderRadius(10px);
+    background-color: #fff;
+    .head {
+      padding-left: 30px;
+      height: 130px;
+      line-height: 210px;
+      @include sc(16px,#494949);
+      @include bis('../../assets/customImages/hz3.png');
+      background-size: cover;
+    }
+  }
+
+  .thirdparty-button {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+  }
+
+  @media only screen and (max-width: 470px) {
+    .thirdparty-button {
+      display: none;
+    }
+  }
+}
+.versionsTxt {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  @include sc(14px,#fff);
+}

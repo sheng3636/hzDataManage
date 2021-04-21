@@ -1,0 +1,54 @@
+@import '../../styles/mixin.scss';
+.topArea {
+  margin-bottom: 15px;
+  height: 390px;
+}
+.countWrap {
+  padding-left: 0;
+  margin: 0;
+  height: 390px;
+  @include fj();
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  li {
+    @include fj();
+    padding: 15px;
+    @include wh(100%,116px);
+    p {
+      span {
+        display: block;
+        &:nth-child(1) {
+          @include sc(20px,#313131);
+        }
+        &:nth-child(2) {
+          margin-top: 5px;
+          font-size: 36px;
+        }
+      }
+    }
+    .count1 {
+      color: #d70029;
+    }
+    .count2 {
+      color: #14ad00;
+    }
+    &:nth-child(1) {
+      background: #fff url('../../assets/customImages/hz5.png') no-repeat;
+      background-position: 160px 25px;
+    }
+    &:nth-child(2) {
+      background: #fff url('../../assets/customImages/hz4.png') no-repeat;
+      background-position: 155px 25px;
+    }
+    &:nth-child(3) {
+      background: #fff url('../../assets/customImages/hz6.png') no-repeat;
+      background-position: 150px 20px;
+    }
+  }
+}
+#indicatorsChart,
+#userChart {
+  height: 390px;
+  background-color: #fff;
+}
